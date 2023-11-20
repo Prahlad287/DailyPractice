@@ -22,10 +22,10 @@ public class Instanceofuse extends Parants implements Firstinstance {
 	
 	public static void main(String[] args) {
 		Parants p=new Parants();
-		Instanceofuse i= new Instanceofuse();
+		Parants i= new Instanceofuse();
 		System.out.println(p instanceof Parants);
 		System.out.println(p instanceof Object);
-		System.out.println(i instanceof Object);
+		System.out.println(i instanceof Parants);
 
 			Firstinstance f=new Instanceofuse();
 			System.out.println(f instanceof Instanceofuse);
