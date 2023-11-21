@@ -13,6 +13,11 @@ public class ArrayListExample {
 		list.add(null);
 		list.add(10);
 		
+		System.out.println(list.remove(0));
+		System.out.println(list.remove(new Integer(20)));
+		System.out.println(list.remove(null));
+		System.out.println(list.remove(null));
+		
 		
 	
 		// print first for list
@@ -42,10 +47,14 @@ public class ArrayListExample {
 		list.stream().forEach(System.out::println);
 		
 		ArrayList<Integer> list1=new ArrayList<Integer>();
-		list1.add(50);
+		list1.add(10);
 		list1.add(200);
 		list1.addAll(1,list);
 		System.out.println(list1);
+		list1.retainAll(list);
+		System.out.println(list1);
+		
+		
 	}
 
 }
