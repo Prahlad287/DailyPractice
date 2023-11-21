@@ -38,6 +38,7 @@ public class LinkedlistExample {
 		System.out.println(list2.indexOf(list2));
 		list2.forEach(System.out::println);
 		System.out.println(list2.size());
+		System.out.println("check");
 		
 		
 
