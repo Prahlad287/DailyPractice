@@ -22,6 +22,7 @@ public class Arraylist_double {
 		list1.add(99.699);
 		System.out.println(list1);
 		list1.ensureCapacity(6);
+		System.out.println(list1.indexOf(20));
 		System.out.println(list1.size());
 		
 	}
