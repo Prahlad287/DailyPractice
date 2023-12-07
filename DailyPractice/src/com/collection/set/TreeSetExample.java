@@ -2,16 +2,24 @@ package com.collection.set;
 
 import java.util.Comparator;
 import java.util.Iterator;
+import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class TreeSetExample {
 
 	public static void main(String[] args) {
-		TreeSet set=new TreeSet();
+		
+	
+		SortedSet<Integer> set2=new TreeSet<Integer>();
+		set2.add(600);
+		
+		
+		TreeSet set=new TreeSet(set2);
+		
+		
 		set.add(20);
 		set.add(10);
 		set.add(5);
-		
 		System.out.println(set);
 		
 		System.out.println(set.first());
@@ -59,8 +67,8 @@ public class TreeSetExample {
 		
 
 		        // Creating a tree set with a customized comparator
-		        TreeSet<String> animals = new TreeSet<>(new CustomComparator());
-
+		       TreeSet<String> animals = new TreeSet<>(new CustomComparator());
+				
 		        animals.add("Dog");
 		        animals.add("Zebra");
 		        animals.add("Cat");
@@ -68,6 +76,14 @@ public class TreeSetExample {
 		        System.out.println("TreeSet: " + animals);
 		    // Creating a comparator class
 		
+				Comparator<String> comparator=Comparator.reverseOrder();
+				TreeSet set3=new TreeSet(comparator);
+				set3.add("prg");
+				set3.add("arg");
+				set3.add("hia");
+				System.out.println(set3);
+				
+
 	}
 	 public static class CustomComparator implements Comparator<String> {
 
