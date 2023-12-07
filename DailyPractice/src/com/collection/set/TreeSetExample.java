@@ -1,5 +1,6 @@
 package com.collection.set;
 
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.TreeSet;
 
@@ -38,9 +39,58 @@ public class TreeSetExample {
 		
 		System.out.println(set.comparator());
 		
-//		System.out.println(set.pollFirst());
-//		System.out.println(set.pollLast());
-//		System.out.println(set.descendingSet());
+		System.out.println(set.pollFirst());
+		System.out.println(set.pollLast());
+		System.out.println(set.descendingSet());
+		System.out.println(set);
+		System.out.println(set.ceiling(30));
+		System.out.println(set.floor(10));
+		System.out.println(set.headSet(30));
+		set.add(10);
+		set.add(50);
+		System.out.println("**********************");
+		System.out.println(set.tailSet(10));
+		System.out.println(set.headSet(50));
+		//System.out.println(set.pollLast());
+		System.out.println(set.pollFirst());
+		System.out.println(set.pollLast());
+		System.out.println(set.headSet(30));
+		
+		
+
+		        // Creating a tree set with a customized comparator
+		        TreeSet<String> animals = new TreeSet<>(new CustomComparator());
+
+		        animals.add("Dog");
+		        animals.add("Zebra");
+		        animals.add("Cat");
+		        animals.add("Horse");
+		        System.out.println("TreeSet: " + animals);
+		    // Creating a comparator class
+		
 	}
+	 public static class CustomComparator implements Comparator<String> {
+
+	        @Override
+	        public int compare(String animal1, String animal2) {
+	        	System.out.println(animal1);
+	        	System.out.println(animal2);
+	            int value =  animal1.compareTo(animal2);
+	           
+	            // elements are sorted in reverse order
+	            if (value > 0) {
+	            	 System.out.println(value);
+	                return 1;
+	            }
+	            else if (value < 0) {
+	            	 System.out.println(value);
+	                return -1;
+	            }
+	            else {
+	            	 System.out.println(value);
+	                return 0;
+	            }
+	        }
+	    }
 
 }
