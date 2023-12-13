@@ -36,7 +36,9 @@ public class ArrayMatrix {
 			System.out.println();
 		}
 		
-
+		if (System.out.append("ehllo")==null) {
+			
+		}
 	}
 
 }
