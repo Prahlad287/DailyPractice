@@ -27,9 +27,9 @@ public class StudentMapExample {
 		Student s1=new Student(287, "Prahlad", "Sikar");
 		Student s2=new Student(295, "Ajay", "Pali");
 		Student s3=new Student(587, "Ram", "Jaipur");
-		Student s4=new Student(0, "Ram", "Jaipur");
+		Student s4=new Student(587, "Ram", "Jaipur");
 		
-		HashMap map=new HashMap();
+		HashMap<Integer, Object> map=new HashMap();
 		map.put(1, s1);
 		map.put(2, s2);
 		map.put(2, s3);
@@ -37,7 +37,17 @@ public class StudentMapExample {
 		//System.out.println(map);
 		
 		map.forEach((key,val)->System.out.println(key+" : "+val));
-
+		System.out.println();
+		System.out.println("*****************Add object in key******************");
+		HashMap map1=new HashMap();
+		map1.put(s1, 1);
+		map1.put(s2, 2);
+		map1.put(s3, 3);
+		map1.put(s3, 5);
+		//System.out.println(map);
+		map1.forEach((key,val)->System.out.println(key+" : "+val));
+		
+		
 	}
 
 }
