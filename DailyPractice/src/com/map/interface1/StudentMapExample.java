@@ -9,7 +9,7 @@ class Student{
 	String name;
 	String college;
 	public Student(int id, String name, String college) {
-		super();
+		
 		this.id = id;
 		this.name = name;
 		this.college = college;
@@ -18,8 +18,16 @@ class Student{
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + ", college=" + college + "]";
 	}
-	
-	
+	@Override
+	public int hashCode() {
+		// TODO Auto-generated method stub
+		return id;
+}
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		return true;
+	}
 }
 public class StudentMapExample {
 
@@ -43,7 +51,7 @@ public class StudentMapExample {
 		map1.put(s1, 1);
 		map1.put(s2, 2);
 		map1.put(s3, 3);
-		map1.put(s3, 5);
+		map1.put(s4, 5);
 		//System.out.println(map);
 		map1.forEach((key,val)->System.out.println(key+" : "+val));
 		

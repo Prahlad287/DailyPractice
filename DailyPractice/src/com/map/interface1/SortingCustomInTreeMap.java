@@ -15,6 +15,7 @@ class Stu {
         this.name = name;
         this.address = address;
     }
+    
 }
 
 class SortingByid implements Comparator<Stu> {
