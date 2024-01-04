@@ -1,5 +1,7 @@
 package com.daily;
 
+import java.util.Scanner;
+
 public class Any {
 	static int i;
 	static double d;
@@ -47,6 +49,23 @@ public class Any {
 //		sum(b);
 		sum('5');
 		
+		
+		String name;
+		  
+		  Scanner sc = new Scanner(System.in);
+		  System.out.println("Enter your name : ");
+		  name = sc.nextLine(); //assume if user enters 'cppbuzz'
+		  
+		  switch(name.length()){
+		   
+		    case 5: 
+		    case 6:
+		    case 7:
+		    case 8:
+		    case 9:
+		    case 10: System.out.print("Length is  5-10"); break;
+		    default: System.out.print("Length not in 5-10");
+		  }
 	}
 
 }

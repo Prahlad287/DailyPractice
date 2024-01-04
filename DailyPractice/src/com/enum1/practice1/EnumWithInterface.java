@@ -1,5 +1,6 @@
 package com.enum1.practice1;
 
+import java.security.PublicKey;
 import java.util.Scanner;
 
 import com.enum1.practice1.EnumPrectice.day;
@@ -26,6 +27,7 @@ public class EnumWithInterface {
             System.out.println("It's a day of the week!");
         }
     }
+	
 		
 
 	public static void main(String[] args) {
@@ -36,6 +38,7 @@ public class EnumWithInterface {
 		System.out.println(Day.MONDAY.hashCode());
 		Day.SUNDAY.show();
 		Day.FUNDAY.show();
+		
 	}
 
 }
